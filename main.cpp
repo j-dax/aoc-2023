@@ -1,14 +1,15 @@
 #include "day1/part1.cpp"
+#include "day1/part2.cpp"
 #include "day2/part1.cpp"
 
 #include <iostream>
 #include <string>
 #include <sstream>
 
-void temp(const std::string& s) {}
+void temp(const std::string& f) {}
 
-std::string read_file(const std::string& filename) {
-    return "";
+std::ifstream read_file(const std::string& filename) {
+    return std::ifstream{filename};
 }
 
 void print_help() {
@@ -43,16 +44,13 @@ int main(int argc, char* argv[]) {
     }
 
     std::string filename = "";
-    std::string contents = "";
-
-    if (argc > 3) {
+    if (argc > 2) {
         filename = argv[3];
-        contents = read_file(filename);
     }
 
     void (*dayparts[][2])(const std::string&) = {
-        {day1::part1, temp},
+        {day1::part1, day1::part2},
         {day2::part1, temp},
     };
-    dayparts[day-1][part-1](contents);
+    dayparts[day-1][part-1](filename);
 }

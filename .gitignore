@@ -34,3 +34,7 @@
 
 ## ccls generated files
 .ccls-cache/
+
+# aoc files
+*.txt
+aoc

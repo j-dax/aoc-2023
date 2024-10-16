@@ -1,0 +1,16 @@
+---
+Language: Cpp
+Standard: c++20
+BasedOnStyle: WebKit
+IndentWidth: 4
+ColumnLimit: 100
+AlignOperands: DontAlign
+BreakBeforeBinaryOperators: NonAssignment
+AllowAllArgumentsOnNextLine: false
+BinPackArguments: true
+AlignAfterOpenBracket: false
+AllowShortLambdasOnASingleLine: Inline
+LambdaBodyIndentation: Signature
+BreakBeforeBraces: Allman
+IndentCaseLabels: true
+AlwaysBreakTemplateDeclarations: Yes

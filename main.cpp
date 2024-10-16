@@ -1,6 +1,6 @@
-#include "day1/part1.cpp"
-#include "day1/part2.cpp"
+#include "day1/day1.cpp"
 #include "day2/day2.cpp"
+#include "day3/day3.cpp"
 
 #include <iostream>
 #include <sstream>
@@ -52,6 +52,7 @@ int main(int argc, char* argv[])
     void (*dayparts[][2])(const std::string&) = {
         { day1::part1, day1::part2 },
         { day2::part1, day2::part2 },
+        { day3::part1, day3::part2 },
     };
     dayparts[day - 1][part - 1](filename);
 }

@@ -93,12 +93,11 @@ void part1(const std::string& filename)
 void part2(const std::string& filename)
 {
     size_t sum = 0;
-    for (auto r : get_symbols(filename) | std::views::filter([](auto& r1) { }))
+    for (auto r : get_symbols(filename)
+            | std::views::filter(
+                [](auto& r1) { return r1.symbol == '*' && r1.surrounding_numbers.size() == 2; }))
     {
-        if (r.symbol == '*' && r.surrounding_numbers.size() == 2)
-        {
-            sum += r.surrounding_numbers[0] * r.surrounding_numbers[1];
-        }
+        sum += r.surrounding_numbers[0] * r.surrounding_numbers[1];
     }
     std::cout << "Total: " << sum << std::endl;
 }

@@ -3,6 +3,7 @@
 #include "day3/day3.cpp"
 #include "day4/day4.cpp"
 #include "day5/day5.cpp"
+#include "day6/day6.cpp"
 
 #include <iostream>
 #include <sstream>
@@ -57,6 +58,7 @@ int main(int argc, char* argv[])
         { day3::part1, day3::part2 },
         { day4::part1, day4::part2 },
         { day5::part1, day5::part2 },
+        { day6::part1, day6::part2 },
     };
     dayparts[day - 1][part - 1](filename);
 }
